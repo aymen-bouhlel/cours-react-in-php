@@ -29,6 +29,7 @@ $articles = App\Generator::getArticles();
                     <h2><?= $article['title'] ?></h2>
                     <p><?= $article['introduction'] ?></p>
                     <a href="article.php" class="btn btn-primary">Lire la suite</a>
+                    <span class="react-like"></span>
                 </div>
             <?php endforeach ?>
         </div>
