@@ -1,4 +1,5 @@
 # Tutoriel vidéo : React In PHP !
+Salut,
 
 Dans ce tutoriel, on voit comment ajouter React à un site existant et même ... vieillissant !
 
