@@ -1,7 +1,9 @@
-console.log('kikoo Youtube');
+console.log("kikoo Youtube");
 
-class LikeButton extends React.Component {
-    constructor(props) {
+
+class LikeButton extends React.Component{
+
+    constructor(props){
         super(props);
 
         this.state = {
@@ -10,15 +12,15 @@ class LikeButton extends React.Component {
         };
     }
 
-    render () {
-        return React.createElement('button', 
-        { className: 'btn btn-link' },
-        "j'aime!"
+    render(){
+        return React.createElement(
+            'button', 
+            {className: 'btn btn-link' }, 
+            "J'aime !"
         );
     }
 }
 
-document.querySelectorAll('span.react-like').forEach(function(span) {
-    ReactDom.render(React.createElement(LikeButton), span);
-
+document.querySelectorAll('span.react-like').forEach(function(span){
+    ReactDOM.render(React.createElement(LikeButton), span);
 });
