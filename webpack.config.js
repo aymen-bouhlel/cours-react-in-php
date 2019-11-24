@@ -2,7 +2,7 @@ var Encore = require('@symfony/webpack-encore');
 
 Encore
     // directory where compiled assets will be stored
-    .setOutputPath('public/build/')
+    .setOutputPath('static/js/')
     // public path used by the web server to access the output path
     .setPublicPath('/static/js')
     // only needed for CDN's or sub-directory deploy
@@ -24,6 +24,12 @@ Encore
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
+
+    .enableReactPreset()
+
+    .configureBabel(function(babelConfig){
+        babelConfig.plugins.push("@babel/plugin-proposal-class-properties");
+    })
 
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
