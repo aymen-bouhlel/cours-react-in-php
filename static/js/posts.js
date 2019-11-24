@@ -19,16 +19,19 @@ class LikeButton extends React.Component {
         this.setState({ likes: likes,  isLiked: !isLiked });
     }
 
-    render() {
-        return React.createElement(
-            'button', 
-            {className: 'btn btn-link', onClick: () => this.handleClick() }, 
-            this.state.likes,
-            " ",
-            React.createElement("i", { className: this.state.isLiked ? "fas fa-thumbs-up" : "far fa-thumbs-up" }),
-            " ",
-           this.state.isLiked ? "Je n'aime plus !" : "J'aime !"
+    render(){
+        return ( 
+            <button className="btn btn-link" onClick={ () => this.handleClick() }>
+                {this.state.likes}{" "}
+                <i 
+                    className={
+                        this.state.isLiked ? "fas fa-thumbs-up" : "far fa-thumbs-up" 
+                    }
+                />{" "}
+                { this.state.isLiked ? "Je n'aime plus !" : "J'aime !" }
+            </button>
         );
+
     }
 }
 

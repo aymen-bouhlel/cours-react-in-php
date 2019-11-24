@@ -46,6 +46,6 @@ $articles = App\Generator::getArticles();
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     
     <!-- Load our React component. -->
-    <script src="static/js/posts.js"></script>
+    <script src="static/js/posts.js" type="text/babel"></script>
 </body>
 </html>
