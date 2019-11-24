@@ -36,16 +36,9 @@ $articles = App\Generator::getArticles();
             <?php endforeach ?>
         </div>
     </div>
-
-    <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
-    <!-- Use JSX: Load babel. -->
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     
     <!-- Load our React component. -->
-    <script src="static/js/posts.js" type="text/babel"></script>
+    <script src="static/js/runtime.js"></script>
+    <script src="static/js/posts.js"></script>
 </body>
 </html>
