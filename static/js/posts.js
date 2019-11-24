@@ -16,7 +16,7 @@ class LikeButton extends React.Component {
         const isLiked = this.state.isLiked;
         const likes = this.state.likes + (isLiked ? -1 : 1);
 
-        this.setState({ likes: likes });
+        this.setState({ likes: likes,  isLiked: !isLiked });
     }
 
     render() {
