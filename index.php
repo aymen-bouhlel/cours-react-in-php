@@ -19,6 +19,8 @@ $articles = App\Generator::getArticles();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mon site en PHP etc etc.</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'/>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/b429c99a30.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
