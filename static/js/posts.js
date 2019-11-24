@@ -25,7 +25,7 @@ class LikeButton extends React.Component {
             {className: 'btn btn-link', onClick: () => this.handleClick() }, 
             this.state.likes,
             " ",
-            "J'aime !"
+           this.state.isLiked ? "Je n'aime plus !" : "J'aime !"
         );
     }
 }
