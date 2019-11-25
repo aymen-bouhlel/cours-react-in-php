@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM  from 'react-dom';
 
 class LikeButton extends React.Component {
     state = {
@@ -11,7 +11,7 @@ class LikeButton extends React.Component {
         const isLiked = this.state.isLiked;
         const likes = this.state.likes + (isLiked ? -1 : 1);
 
-        this.setState({ likes: likes,  isLiked: !isLiked });
+        this.setState({ likes,  isLiked: !isLiked });
     }
 
     render(){
@@ -29,6 +29,9 @@ class LikeButton extends React.Component {
     }
 }
 
-document.querySelectorAll('span.react-like').forEach(function(span) {
-    ReactDom.render(React.createElement(LikeButton), span);
+document.querySelectorAll("span.react-like").forEach(function(span) {
+    const likes = +span.dataset.likes;
+    const isLiked = +span.dataset.isLiked === 1;
+
+    ReactDOM.render(<LikeButton likes={ likes } isLiked={ isLiked } />, span);
 });

@@ -31,7 +31,7 @@ $articles = App\Generator::getArticles();
                     <h2><?= $article['title'] ?></h2>
                     <p><?= $article['introduction'] ?></p>
                     <a href="article.php" class="btn btn-primary">Lire la suite</a>
-                    <span class="react-like"></span>
+                    <span class="react-like" data-likes="<?= $article['likes'] ?>" data-is-liked="<?= $article['isLiked'] ?>"></span>
                 </div>
             <?php endforeach ?>
         </div>
